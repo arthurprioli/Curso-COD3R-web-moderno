@@ -6,6 +6,9 @@ function aplicacaoComJurosSimples(capitalInicial, juros, tempo){
 
 console.log(aplicacaoComJurosSimples(1000, 0.1, 10))
 
-function aplicacaoComJurosCompostos(capitalInicial, juros, tempo){
-    
+function aplicacaoComJurosCompostos(capitalIncial, juros, tempo){
+    let montante = capitalIncial * ((1 + 0.01)**tempo)
+    return montante.toFixed(2)
 }
+
+console.log(aplicacaoComJurosCompostos(300, 0.1, 12))
