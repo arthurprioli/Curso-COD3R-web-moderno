@@ -1,11 +1,11 @@
 function percorreVetorMaiorEMenor(vetor){
-    let maior = null
-    let menor = Infinity
+    let maior = vetor[0]
+    let menor = vetor[0]
     for (numero in vetor){
-        switch (vetor[numero]){
-            case (vetor[numero] > maior):
-                maior = vetor[numero]
-                console.log(vetor[numero])
+        if (vetor[numero] > maior){
+            maior = vetor[numero]
+        } else if (vetor[numero] < menor){
+            menor = vetor[numero]
         }
     }
     return `Maior: ${maior}, Menor: ${menor}` 
