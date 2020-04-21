@@ -3,4 +3,4 @@
  
  Coloco esses exercícios no meu repositório para ver meu progresso e poder faze-los em outras máquinas.
 
- O curso é dado pela COD3R na Udemy, o instrutor é o Leonardo Moura Leitão
+ O curso é dado pela COD3R na Udemy, o instrutor é o Leonardo Moura Leitão, seu link é: [Curso Web Moderno](https://www.udemy.com/course/curso-web/)
