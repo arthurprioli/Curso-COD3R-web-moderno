@@ -7,8 +7,8 @@ console.log(saudacao.ola)
 const ola2 = require('./pastaC/index')
 console.log(saudacao.ola2)
 
-/*const http = require('http')
+const http = require('http')
 http.createServer((req, res) => {
     res.write('Bom dia!')
     res.end()
-}).listen(8080)*/
+}).listen(8080)

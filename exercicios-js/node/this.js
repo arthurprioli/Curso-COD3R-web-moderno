@@ -13,5 +13,4 @@ function logThis(){
 
 }
 
-this.perigo = '...'
 logThis()
