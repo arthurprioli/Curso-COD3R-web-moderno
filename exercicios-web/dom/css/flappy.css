@@ -1,0 +1,13 @@
+[wm-flappy] {
+    width: 700px;
+    height: 500px;
+    background-color: skyblue;
+}
+
+.pipes {
+    display: flex;
+    flex-direction: column; 
+    height: 40px;
+    width: 20px;
+    background-color: green;
+}
