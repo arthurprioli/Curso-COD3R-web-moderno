@@ -4,6 +4,7 @@ const app = express()
 
 app.use(express.static('.'))
 app.use(bodyParser.urlencoded({ extended:true }))
+app.use(bodyParser.json())
 
 const multer = require('multer')
 
@@ -30,12 +31,15 @@ app.post('/upload', (req, res) => {
 app.post('/formulario', (req, res) => {
     res.send({
         ...req.body,
-        id: 1
+        id: 5
     })
 })
 
 app.get('/parOuImpar', (req, res) => {
-    const par = parseInt()
+    const par = parseInt(req.query.numero) % 2 == 0
+    res.send({
+        resultado: par ? 'par' : 'impar'
+    })
 })
 
 app.get('/teste', (req, res) => res.send('Ok'))
