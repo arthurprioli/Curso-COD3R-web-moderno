@@ -6,31 +6,41 @@ const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
 
-
 function appHTML(){
     return gulp.src('src/**/*.html')
         .pipe(htmlmin({ collapseWhitespace: true}))
-        .pipe('')
+        .pipe(gulp.dest('build'))
 }
 
-function appCSS(cb){
-
-    return cb()
+function appCSS(){
+    return gulp.src('/Users/arthur/Documents/dev/Curso-COD3R-web-moderno/exercicios-web/gulp/spa/src/assets/sass/index.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(uglifycss({ "uglyComments": true }))
+        .pipe(concat('app.min.css'))
+        .pipe(gulp.dest('build/assets/css'))
 }
 
-function appJS(cb){
-
-    return cb()
+function appJS(){
+    return gulp.src('src/assets/js/**/*.js')
+        .pipe(babel({ presets: ['ENV']}))
+        .pipe(uglify())
+        .pipe(concat('app.min.js'))
+        .pipe(gulp.dest('build/assets/js'))
 }
 
 function appIMG(cb){
-
-    return cb()
+    return gulp.src('src/assets/imgs/**/*.*')
+        .pipe(gulp.dest('build/assets/imgs'))
 }
 
-module.exports = { 
-    appHTML, 
+gulp.task('appHTML', appHTML)
+gulp.task('appCSS', appCSS)
+gulp.task('appJS', appJS)
+gulp.task('appIMG', appIMG)
+
+module.exports = {
+    appHTML,
     appCSS,
-    appJS, 
+    appJS,
     appIMG
 }
