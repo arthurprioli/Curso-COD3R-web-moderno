@@ -8,6 +8,7 @@ module.exports = {
     mode: modoDev ? 'development' : 'production',
     entry: './src/principal.js',
     output: {
+        
         filename: 'principal.js',
         path: __dirname + '/public'
     },
